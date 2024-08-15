@@ -20,10 +20,11 @@ namespace Dunnhumby
                     int i = Int32.Parse(s) - 1;
                     if (board[i].Equals("-"))
                         return i;
-                    Console.WriteLine($"Space number {i+1} is already occupied. Please choose another.");
+                    Console.WriteLine($"\nSpace number {i+1} is already occupied. Please choose another.");
                     
                 }
-                Console.WriteLine($"{s} is not a number between 1 and 9 inclusive.");
+                else
+                    Console.WriteLine($"\n{s} is not a number between 1 and 9 inclusive.");
             }
         }
     }
