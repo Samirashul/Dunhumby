@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 
 namespace Dunnhumby
 {
-    public class Grid
+    public class Grid : iGrid
     {
         private string[] grid = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
         private int counter;
+
+        
 
         public void Write(string player, int space)
         { 
@@ -26,7 +28,7 @@ namespace Dunnhumby
             Console.Write("\n");
         }
 
-        public string[] getGrid()
+        public string[] GetGrid()
         { 
             return grid;
         }

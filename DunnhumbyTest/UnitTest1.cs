@@ -8,16 +8,16 @@ namespace DunnhumbyTest
         [TestMethod]
         public void TestNonNumericEntry()
         {
-            Board gameBoard = new Board();
+            InputHandler inputHandler = new InputHandler();
 
-            Assert.AreEqual(10, gameBoard.GetNextKey("a"));
+            Assert.AreEqual(10, inputHandler.GetNextKey("a"));
 
         }
 
         [TestMethod]
         public void TestNonEmptySpace()
         {
-            Board gameBoard = new Board();
+            Grid gameBoard = new Grid();
 
             gameBoard.board[0] = "X";
 
@@ -29,7 +29,7 @@ namespace DunnhumbyTest
         [TestMethod]
         public void TestEntry()
         {
-            Board gameBoard = new Board();
+            Grid gameBoard = new Grid();
 
             string[] expected = ["X", "-", "-", "-", "-", "-", "-", "-", "-"];
 
@@ -42,7 +42,7 @@ namespace DunnhumbyTest
         [TestMethod]
         public void TestVictory()
         {
-            Board gameBoard = new Board();
+            Grid gameBoard = new Grid();
 
             gameBoard.board = ["X", "X", "-", "-", "-", "-", "-", "-", "-"];
 
@@ -53,7 +53,7 @@ namespace DunnhumbyTest
         [TestMethod]
         public void TestWinningMove()
         {
-            Board gameBoard = new Board();
+            Grid gameBoard = new Grid();
 
             gameBoard.board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"];
 
@@ -64,7 +64,7 @@ namespace DunnhumbyTest
         [TestMethod]
         public void TestNonWinningMove()
         {
-            Board gameBoard = new Board();
+            Grid gameBoard = new Grid();
 
             Assert.IsFalse(gameBoard.addEntry(0));
 

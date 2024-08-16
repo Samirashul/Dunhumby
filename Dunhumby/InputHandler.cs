@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dunnhumby
 {
-    public class InputHandler
+    public class InputHandler : iInputHandler
     {
         public int GetNextKey(string[] board)
         {
